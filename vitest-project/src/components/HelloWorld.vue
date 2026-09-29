@@ -1,5 +1,7 @@
 <script setup lang="ts">
-//
+import {ref} from 'vue'
+
+const counter = ref(1)
 </script>
 
 <template>
@@ -30,7 +32,8 @@
           >
             <template #text>
               <h1>Get started</h1>
-              Counter 0
+              Counter {{ counter }}
+              <v-btn @click="counter++">Increment</v-btn>
             </template>
 
             <v-btn to="/configurator">Go To Configurator</v-btn>
