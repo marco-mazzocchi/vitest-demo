@@ -13,6 +13,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppBar: typeof import('./src/components/AppBar.vue')['default']
     Configurator: typeof import('./src/components/Configurator.vue')['default']
+    Counter: typeof import('./src/components/Counter.vue')['default']
+    GreatestNumber: typeof import('./src/components/GreatestNumber.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

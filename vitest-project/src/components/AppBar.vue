@@ -12,7 +12,7 @@
     <v-app-bar-title>Vitest</v-app-bar-title>
 
     <template v-slot:append>
-      <v-btn to="/configurator" icon="mdi-cog"></v-btn>
+      <v-btn to="/configurator" icon="mdi-pizza"></v-btn>
     </template>
   </v-app-bar>
 </template>
