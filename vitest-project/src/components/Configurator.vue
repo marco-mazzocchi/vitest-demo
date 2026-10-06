@@ -97,12 +97,10 @@ function emptyToppings() {
   <v-container fluid class="fill-height">
     <v-row>
       <v-col cols="12">
-        <h1 class="text-center">Configuratore di Pizza</h1>
-        <div class="d-flex align-center">
-          Filtri:
-          <v-checkbox-btn v-for="filter in filters" :key="filter.key" :label="filter.name" :model-value="filter.value"
+        <v-toolbar density="compact" title="Filtri">
+<v-checkbox-btn v-for="filter in filters" :key="filter.key" :label="filter.name" :model-value="filter.value"
             @update:model-value="onFilterChange(filter.key, $event)" />
-        </div>
+        </v-toolbar>
       </v-col>
     </v-row>
     <v-row>
