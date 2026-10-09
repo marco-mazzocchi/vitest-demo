@@ -67,8 +67,13 @@ function emptyToppings() {
     <v-row>
       <v-col cols="12">
         <v-toolbar density="compact" title="Filtri">
-          <v-checkbox-btn v-for="filter in filters" :key="filter.key" :label="filter.name" :model-value="filter.value"
-                          @update:model-value="onFilterChange(filter.key, $event)"/>
+          <v-checkbox-btn
+            v-for="filter in filters"
+            :key="filter.key"
+            :label="filter.name"
+            :model-value="filter.value"
+            @update:model-value="onFilterChange(filter.key, $event)"
+          />
         </v-toolbar>
       </v-col>
     </v-row>
@@ -81,14 +86,17 @@ function emptyToppings() {
           </v-card-title>
           <v-card-text>
             <v-list density="compact">
-              <v-list-item v-for="(topping, index) in visibleToppings" :key="topping.name" :title="topping.name"
-                           :value="index" @click="onToppingChange(topping.name, !topping.selected)">
-                <template #prepend>
-                  <v-list-item-action start>
-                    <v-checkbox-btn :model-value="topping.selected"
-                                    @update:model-value="onToppingChange(topping.name, $event)"></v-checkbox-btn>
-                  </v-list-item-action>
-                </template>
+              <v-list-item
+                v-for="(topping, index) in visibleToppings"
+                :key="topping.name"
+                :value="index"
+                @click="onToppingChange(topping.name, !topping.selected)"
+              >
+                <v-checkbox-btn
+                  :model-value="topping.selected"
+                  :label="topping.name"
+                  @update:model-value="onToppingChange(topping.name, $event)"
+                />
               </v-list-item>
             </v-list>
           </v-card-text>
