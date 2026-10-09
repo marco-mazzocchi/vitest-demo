@@ -6,6 +6,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
+    "test:unit": "vitest run helpers/math.test.js",
+    "test:update": "vitest run helpers/math.test.js --update",
     "test:ui": "vitest --ui",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
