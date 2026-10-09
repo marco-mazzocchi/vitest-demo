@@ -1,3 +1,7 @@
+export function doubles(value: number) {
+  return value * 2
+}
+
 export function sum(a: number, b: number): number {
   return a + b;
 }

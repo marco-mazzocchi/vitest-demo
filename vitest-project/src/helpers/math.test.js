@@ -1,5 +1,11 @@
 import { expect, test } from 'vitest'
-import {greatest, sum} from './math'
+import {doubles, greatest, sum} from './math'
+
+test('Doubles function', () => {
+  expect(doubles(2)).toBe(4)
+  expect(doubles(12)).toBe(24)
+  expect(doubles(2026)).toBe(4052)
+})
 
 test('Sum function adds two numbers correctly', () => {
   expect(sum(1, 2)).toBe(3)
