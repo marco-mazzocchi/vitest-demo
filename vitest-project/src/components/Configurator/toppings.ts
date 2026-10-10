@@ -3,7 +3,17 @@ import {glutenFreeKey,
   vegetarianKey,
   veganKey} from './constants'
 
-const toppings = [
+export type Topping = {
+  name: string
+  selected: boolean
+  glutenFree: boolean
+  lactoseFree: boolean
+  vegetarian: boolean
+  vegan: boolean
+  zIndex?: number
+}
+
+const toppings: Topping[] = [
   {
     name: 'Pomodoro',
     zIndex: 2,

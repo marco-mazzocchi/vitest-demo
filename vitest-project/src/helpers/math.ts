@@ -1,4 +1,4 @@
-export function doubles(value: number) {
+export function doubles(value: number): number {
   return value * 2
 }
 

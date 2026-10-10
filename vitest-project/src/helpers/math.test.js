@@ -9,13 +9,13 @@ describe('Math helpers', () => {
     expect(doubles(2026)).toBe(4052)
   })
 
-  test.skip('Sum function adds two numbers correctly', () => {
+  test('Sum function adds two numbers correctly', () => {
     expect(sum(1, 2)).toBe(3)
     expect(sum(-1, 1)).toBe(0)
     expect(sum(0, 0)).toBe(0)
   })
 
-  test.skip('Greatest function', () => {
+  test('Greatest function', () => {
     expect(greatest(2, 4)).toBe(4)
     expect(greatest(4, 2)).toBe(4)
     expect(greatest(0, 8)).toBe(8)
@@ -24,7 +24,7 @@ describe('Math helpers', () => {
 
 })
 
-/*let items
+/* let items
 
 beforeEach(() => {
   items = ['apple', 'banana', 'cherry']
@@ -32,18 +32,17 @@ beforeEach(() => {
 
 afterEach(() => {
   items = []
-})*/
+}) */
 
-/*beforeAll(() => {
+/* beforeAll(() => {
   console.log("Before all tests")
 })
 
 afterAll(() => {
   console.log("After all tests")
-})*/
+}) */
 
 describe.todo('Matchers', () => {
-// describe('Matchers', () => {
 
   test('object assignment', () => {
     const data = { one: 1 }
@@ -72,14 +71,6 @@ describe.todo('Matchers', () => {
     expect(n).not.toBeUndefined()
   })
 
-  test('zero', () => {
-    const z = 0
-
-    expect(z).toBeDefined() // passes: 0 is defined
-    expect(z).toBeFalsy() // passes: 0 is falsy
-    expect(z).not.toBeNull() // passes: 0 is not null
-  })
-
   test('number comparisons', () => {
     const value = 4
 
@@ -93,6 +84,8 @@ describe.todo('Matchers', () => {
     expect(value).toEqual(4)
   })
 
+  // Strings
+
   test('there is no I in team', () => {
     expect('team').not.toMatch(/I/)
   })
@@ -100,6 +93,8 @@ describe.todo('Matchers', () => {
   test('version string matches semver format', () => {
     expect('vitest@1.0.0').toMatch(/vitest@\d+\.\d+\.\d+/)
   })
+
+  // Arrays and iterables
 
   test('the shopping list has milk in it', () => {
     const shoppingList = ['milk', 'bread', 'eggs', 'butter']
@@ -123,6 +118,7 @@ describe.todo('Matchers', () => {
     })
   })
 
+  // throw check
   test('compiling an empty string throws', () => {
     function compileCode(code) {
       if (code === '') {

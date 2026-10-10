@@ -13,6 +13,7 @@ test('Configurator filters', async ({ page }) => {
   await page.getByRole('checkbox', { name: 'Pomodoro' }).check();
   await page.getByRole('checkbox', { name: 'Funghi' }).check();
   await page.getByRole('checkbox', { name: 'Salsiccia' }).check();
+
   await expect(page.getByRole('img', { name: 'Base' })).toBeVisible();
   await expect(page.getByRole('img', { name: 'Pomodoro' })).toBeVisible();
   await expect(page.getByRole('img', { name: 'Funghi' })).toBeVisible();

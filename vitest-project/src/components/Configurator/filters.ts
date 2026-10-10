@@ -3,6 +3,12 @@ import {glutenFreeKey,
   vegetarianKey,
   veganKey} from './constants'
 
+export type Filter = {
+  key: string
+  name: string
+  value: boolean
+}
+
 const filters = [
   {
     key: lactoseFreeKey,

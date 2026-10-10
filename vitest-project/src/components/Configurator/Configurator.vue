@@ -3,28 +3,14 @@ import type {Reactive} from 'vue'
 import {computed, reactive} from 'vue'
 import defaultFilters from './filters'
 import defaultToppings from './toppings'
-
-type Topping = {
-  name: string
-  selected: boolean
-  glutenFree: boolean
-  lactoseFree: boolean
-  vegetarian: boolean
-  vegan: boolean
-  zIndex?: number
-}
-
-type Filter = {
-  key: string
-  name: string
-  value: boolean
-}
+import type {Filter} from './filters'
+import type {Topping} from './toppings'
 
 // STATES
 
 const filters: Reactive<Filter[]> = reactive(defaultFilters)
 
-const toppings = reactive(defaultToppings)
+const toppings: Reactive<Topping[]> = reactive(defaultToppings)
 
 // COMPUTED
 
