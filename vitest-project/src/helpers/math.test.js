@@ -4,7 +4,8 @@ import {doubles, greatest, sum} from './math'
 describe('Math helpers', () => {
 
   test('Doubles function', () => {
-    expect(doubles(2)).toBe(4)
+    const result = doubles(2)
+    expect(result).toBe(4)
     expect(doubles(12)).toBe(24)
     expect(doubles(2026)).toBe(4052)
   })
