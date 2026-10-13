@@ -6,6 +6,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     baseURL: 'http://127.0.0.1:3000',
+    video: 'on',
   },
   webServer: {
     command: 'npm run dev -- --host 127.0.0.1',
