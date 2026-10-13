@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   test: {
-    setupFiles: ['./src/test/setup.ts'],
+    /* setupFiles: ['./src/test/setup.ts'],
     browser: {
       enabled: true,
       provider: playwright(),
@@ -20,6 +20,6 @@ export default defineConfig({
       instances: [
         { browser: 'chromium' },
       ],
-    },
+    }, */
   },
 })
