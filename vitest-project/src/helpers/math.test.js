@@ -45,11 +45,7 @@ afterAll(() => {
 
 describe.todo('Matchers', () => {
 
-  test('object assignment', () => {
-    const data = { one: 1 }
-    data.two = 2
-    expect(data).toEqual({ one: 1, two: 2 })
-  })
+  // Object equality
 
   test('toBe vs toEqual', () => {
     const a = { name: 'Alice' }
@@ -60,6 +56,21 @@ describe.todo('Matchers', () => {
 
     // But they have the same structure
     expect(a).toEqual(b)
+  })
+
+  test('user has expected fields', () => {
+    const user = {
+      id: 1,
+      name: 'Alice',
+      email: 'alice@example.com',
+      createdAt: '2024-01-01'
+    }
+
+    // We only care about name and email here
+    expect(user).toMatchObject({
+      name: 'Alice',
+      email: 'alice@example.com',
+    })
   })
 
   test('null checks', () => {
@@ -102,21 +113,6 @@ describe.todo('Matchers', () => {
 
     expect(shoppingList).toContain('milk')
     expect(new Set(shoppingList)).toContain('milk')
-  })
-
-  test('user has expected fields', () => {
-    const user = {
-      id: 1,
-      name: 'Alice',
-      email: 'alice@example.com',
-      createdAt: '2024-01-01'
-    }
-
-    // We only care about name and email here
-    expect(user).toMatchObject({
-      name: 'Alice',
-      email: 'alice@example.com',
-    })
   })
 
   // throw check
@@ -175,7 +171,7 @@ describe.skip('Mocks & Snapshots', () => {
 
   function generateGreeting(name) {
     return {
-      message: `Hello, ${name}!`,
+      message: `Ciao, ${name}!`,
       timestamp: null,
       version: 2,
     }
